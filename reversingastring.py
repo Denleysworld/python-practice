@@ -1,21 +1,18 @@
-#define a function to reverse a string without using the built-in reverse function or [::-1] slicing
-
-def reversestring(string):
-    #initialize the reversed string variable to an empty string
-    reversedstring = ""
-    #loop through the string in reverse order 
-    #first -1 to get the last index of the string
-    #then -1 to get the first index of the string
-    #then -1 to get the reverse order of the string
-    #the range function will start at the last index of the string and end at the first index of the string
-    for i in range(len(string) - 1,-1, -1):
-        #add each character to the reversed string variable
-        reversedstring += string[i]
-    #return the reversed string variable
-    return reversedstring
-#test cases 
+#Defining a function to reverse a string without using built-in functions or [::-1]
+def reversestring(s):
+    # Initialize an empty string to store the reversed string
+    reversedstr = ""
+    # Loop through the string in its current order
+    for char in s:
+        #Add each character to the beginning of the reversed string as you move along a string
+        # the logic is if a string is "abc" then if you start adding the characters from the beginning
+        #it will be "a" then "ba" then "cba"
+        reversedstr =char+reversedstr
+    return reversedstr
+# Test the function
 if __name__ == "__main__":
-    
-    print(reversestring("Denley")) #output should be yelned
-    print(reversestring("Python")) #output should be nohtyP
+    test_string = "Denley"
+    print(test_string)
+    print(reversestring(test_string))
+
     
